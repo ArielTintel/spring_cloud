@@ -36,9 +36,9 @@ public class CompraController {
         compraChaveJson.setCompraJson(compraJson);
         compraChaveJson.setChave(UUID.randomUUID().toString());
 
-        ObjectMapper obj = new ObjectMapper();
+        ObjectMapper objectMapper = new ObjectMapper();
 
-        String json = obj.writeValueAsString(compraChaveJson);
+        String json = objectMapper.writeValueAsString(compraChaveJson);
 
         rabbitTemplate.convertAndSend(nomeFila, json);
 

@@ -1,10 +1,10 @@
 package br.com.arieltintel.passagem.gateway.json;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class RetornoJson {
