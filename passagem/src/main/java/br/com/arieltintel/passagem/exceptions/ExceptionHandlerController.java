@@ -18,8 +18,8 @@ public class ExceptionHandlerController {
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        for( ObjectError item : exception.getBindingResult().getAllErrors() ){
-            stringBuilder.append(item.getDefaultMessage());
+        for( ObjectError objectError : exception.getBindingResult().getAllErrors() ){
+            stringBuilder.append(objectError.getDefaultMessage());
             stringBuilder.append("\n");
         }
 

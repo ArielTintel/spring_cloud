@@ -43,7 +43,7 @@ public class CompraController {
         rabbitTemplate.convertAndSend(nomeFila, json);
 
         RetornoJson retorno = new RetornoJson();
-        retorno.setMensagem("Compra registrada com sucesso. Aguarda a confirmação do pagamento.");
+        retorno.setMensagem("Compra registrada com sucesso.\nAguardando a confirmação do pagamento.");
         retorno.setChavePesquisa(compraChaveJson.getChave());
 
         return new ResponseEntity<RetornoJson>(retorno, HttpStatus.OK);

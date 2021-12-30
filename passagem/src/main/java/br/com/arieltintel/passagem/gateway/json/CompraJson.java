@@ -17,12 +17,12 @@ public class CompraJson {
     private Integer codigoPassagem;
 
     @NotNull(message = "Número do cartão é obrigatório")
-    private Integer nroCartao;
+    private Integer numeroCartao;
 
     @NotNull(message = "Código de segurança do cartão é obrigatório")
     private Integer codigoSegurancaCartao;
 
-    @NotNull(message = "Valor da compra é obrigatório")
+    @NotNull(message = "Valor da passagem é obrigatório")
     private BigDecimal valorPassagem;
 
 }
