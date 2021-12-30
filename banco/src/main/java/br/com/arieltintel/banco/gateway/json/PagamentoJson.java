@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 public class PagamentoJson {
 
     @NotNull(message = "Número do cartão é obrigatório.")
-    private Integer nroCartao;
+    private Integer numeroCartao;
 
     @NotNull(message = "Código de segurança do cartão é obrigatório.")
     private Integer codigoSegurancaCartao;

@@ -20,21 +20,21 @@ public class PagamentoService {
     @Transactional
     public void pagamento(PagamentoJson pagamentoJson){
 
-        if (!cartaoService.isValido(pagamentoJson.getCodigoSegurancaCartao(),pagamentoJson.getNroCartao() )){
+        if (!cartaoService.isValido(pagamentoJson.getCodigoSegurancaCartao(),pagamentoJson.getNumeroCartao() )){
             throw new PagamentoException("Cartão inválido.");
         }
 
-        if( !cartaoService.isSaldoSuficiente(pagamentoJson.getCodigoSegurancaCartao(), pagamentoJson.getNroCartao(), pagamentoJson.getValorCompra()) ){
+        if( !cartaoService.isSaldoSuficiente(pagamentoJson.getCodigoSegurancaCartao(), pagamentoJson.getNumeroCartao(), pagamentoJson.getValorCompra()) ){
             throw new PagamentoException("Cartão não possui saldo suficiente.");
         }
 
         Pagamento pagamento = new Pagamento();
         pagamento.setValorCompra(pagamentoJson.getValorCompra());
-        pagamento.setCartao(cartaoService.getCartao(pagamentoJson.getCodigoSegurancaCartao(), pagamentoJson.getNroCartao()));
+        pagamento.setCartao(cartaoService.getCartao(pagamentoJson.getCodigoSegurancaCartao(), pagamentoJson.getNumeroCartao()));
 
         pagamentoRepository.save(pagamento);
 
-        cartaoService.atualizarSaldo(pagamentoJson.getCodigoSegurancaCartao(), pagamentoJson.getNroCartao(), pagamentoJson.getValorCompra());
+        cartaoService.atualizarSaldo(pagamentoJson.getCodigoSegurancaCartao(), pagamentoJson.getNumeroCartao(), pagamentoJson.getValorCompra());
 
     }
 }

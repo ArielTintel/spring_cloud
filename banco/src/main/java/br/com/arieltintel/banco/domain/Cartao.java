@@ -22,7 +22,7 @@ public class Cartao {
     @GeneratedValue
     private Long id;
 
-    private Integer nroCartao;
+    private Integer numeroCartao;
 
     private Integer codigoSegurancaCartao;
 
