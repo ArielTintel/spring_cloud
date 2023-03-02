@@ -1,2 +1,3 @@
 ## Comunicação Microservices utilizando Spring Boot,RabbitMQ, Docker,Redis.
-![Arquitetura Clound - Estudos](https://user-images.githubusercontent.com/83794216/222288872-ac3df120-803a-4b98-9358-7768e0cfe058.png)
+
+![Spring_Boot-RabbitMQ-Redis-MySQL](https://user-images.githubusercontent.com/83794216/222300742-c68ffe62-6623-4c33-8242-8687bf479908.png)
